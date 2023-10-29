@@ -1,0 +1,68 @@
+.cell {
+    width: 75px;
+    height: 75px;
+    border: 1px solid;
+    box-shadow: 0 0 0 2px;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#gameContainer {
+    display: flexbox;
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+    background-color: #00FFFC;
+    border: 2px dotted black;
+    width: 50%;
+    box-shadow: 5px 5px;
+}
+
+button {
+    margin-bottom: 20px;
+    border-radius: 25px;
+    border: 1px dotted black;
+}
+
+.transition:hover {
+    transform: scale(0.9); color: rgb(202, 8, 192); font-weight: bolder;
+}
+
+.transform:hover {
+    transform: rotate(10deg) scale(0.7);
+}
+
+#cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(202, 8, 192);
+}
+
+h2 {
+    margin: 0 auto;
+    border-radius: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#statusText {
+    color: rgb(202, 8, 192);
+    background-color: #00FFFC;
+    width: 150px;
+    animation-name: animatedText;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animatedText {
+    0%   {background-color: rgb(241, 235, 235);}
+    25%  {background-color: yellow;}
+    50%  {background-color: rgb(3, 40, 75);}
+    100% {background-color: rgb(147, 243, 147);}
+  }

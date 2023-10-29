@@ -9,23 +9,25 @@
 }
 
 #gameContainer {
-    display: flexbox;
     font-family: "Permanent Marker", cursive;
     text-align: center;
+    border-radius: 25px;
     background-color: #00FFFC;
     border: 2px dotted black;
     width: 50%;
-    box-shadow: 5px 5px;
+    box-shadow: 5px 5px 4px;
 }
 
 button {
     margin-bottom: 20px;
     border-radius: 25px;
-    border: 1px dotted black;
+    border: 1px solid black;
+    color: rgb(202, 8, 192);
+    text-shadow: 2px 2px 8px #535353;
 }
 
 .transition:hover {
-    transform: scale(0.9); color: rgb(202, 8, 192); font-weight: bolder;
+    transform: scale(0.9); color: red; font-weight: bolder;
 }
 
 .transform:hover {
@@ -37,23 +39,28 @@ button {
     grid-template-columns: repeat(3, auto);
     width: 225px;
     margin: auto;
+    color: rgb(202, 8, 192);
 }
 
 h1 {
     text-align: center;
     color: rgb(202, 8, 192);
+    text-shadow: 2px 2px 8px #535353;
 }
 
 h2 {
     margin: 0 auto;
+    border: 2px solid black;
     border-radius: 45px;
     margin-top: 10px;
     margin-bottom: 10px;
+    box-shadow: 5px 5px 7px;
+    text-shadow: 2px 2px 8px #535353;
 }
 
 #statusText {
     color: rgb(202, 8, 192);
-    background-color: #00FFFC;
+    background-color: #7de0df;
     width: 150px;
     animation-name: animatedText;
     animation-duration: 10s;

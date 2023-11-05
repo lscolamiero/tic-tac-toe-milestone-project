@@ -1,6 +1,8 @@
+//Declaring variables
 const cells = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
 const restartBtn = document.querySelector("#restartBtn");
+//Array of winning conditions
 const winConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -15,14 +17,18 @@ let options = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
 let running = false;
 
+//Initializing the game
 initializeGame();
 
+//Initialize function
 function initializeGame(){
     cells.forEach(cell => cell.addEventListener("click", cellClicked));
     restartBtn.addEventListener("click", restartGame);
     statusText.textContent = `${currentPlayer}'s turn`;
     running = true;
 }
+
+//If a cell is clicked this funtion will run calling the other functions to update cell status and check a winner constantly
 function cellClicked(){
     const cellIndex = this.getAttribute("cellIndex");
 
@@ -33,14 +39,20 @@ function cellClicked(){
     updateCell(this, cellIndex);
     checkWinner();
 }
+
+//function that updates the cell status to the current player X or O
 function updateCell(cell, index){
     options[index] = currentPlayer;
     cell.textContent = currentPlayer;
 }
+
+//function that change the turn of the players
 function changePlayer(){
     currentPlayer = (currentPlayer == "X") ? "O" : "X";
     statusText.textContent = `${currentPlayer}'s turn`;
 }
+
+//function that check on every clicked if there is a winner
 function checkWinner(){
     let roundWon = false;
 
@@ -71,6 +83,8 @@ function checkWinner(){
         changePlayer();
     }
 }
+
+//function that set the game values to default to start the game over
 function restartGame(){
     currentPlayer = "X";
     options = ["", "", "", "", "", "", "", "", ""];

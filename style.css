@@ -12,7 +12,7 @@
     font-family: "Permanent Marker", cursive;
     text-align: center;
     border-radius: 25px;
-    background-color: #00FFFC;
+    background-color: #2F3C7E;
     border: 2px dotted black;
     width: 50%;
     box-shadow: 5px 5px 4px;
@@ -21,9 +21,11 @@
 button {
     margin-bottom: 20px;
     border-radius: 25px;
-    border: 1px solid black;
-    color: rgb(202, 8, 192);
+    border: none;
+    color: #FBEAEB;
     text-shadow: 2px 2px 8px #535353;
+    background-color: #2F3C7E;
+    font-family: "Permanent Marker", cursive;
 }
 
 .transition:hover {
@@ -31,7 +33,7 @@ button {
 }
 
 .transform:hover {
-    transform: rotate(10deg) scale(0.7);
+    transform: rotate(10deg) scale(0.7); color: red; font-weight: bolder;
 }
 
 #cellContainer {
@@ -39,12 +41,12 @@ button {
     grid-template-columns: repeat(3, auto);
     width: 225px;
     margin: auto;
-    color: rgb(202, 8, 192);
+    color: #FBEAEB;
 }
 
 h1 {
     text-align: center;
-    color: rgb(202, 8, 192);
+    color: #FBEAEB;
     text-shadow: 2px 2px 8px #535353;
 }
 
@@ -59,17 +61,18 @@ h2 {
 }
 
 #statusText {
-    color: rgb(202, 8, 192);
+    color: #FBEAEB;
     background-color: #7de0df;
     width: 150px;
     animation-name: animatedText;
     animation-duration: 10s;
     animation-iteration-count: infinite;
+    border: none;
 }
 
 @keyframes animatedText {
     0%   {background-color: rgb(241, 235, 235);}
-    25%  {background-color: yellow;}
+    25%  {background-color: orange;}
     50%  {background-color: rgb(3, 40, 75);}
     100% {background-color: rgb(147, 243, 147);}
   }
